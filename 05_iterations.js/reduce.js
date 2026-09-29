@@ -22,3 +22,30 @@ const arr2 = newStringArray.reduce( (acc, val) => {
 
 // console.log(arr2);
 
+
+// shopping cart example
+
+const shoppingCart = [
+    {
+        courseName : 'javascript course',
+        price : 999
+    } ,
+    {
+        courseName : 'python course',
+        price : 3999
+    } ,
+    {
+        courseName : 'java course',
+        price : 2999
+    } ,
+    {
+        courseName : 'cpp course',
+        price : 1999
+    } ,
+]
+
+const total = shoppingCart.reduce( (acc, obj) => (acc+obj.price) ,0 )
+
+console.log(total); //prints the total amount
+
+
