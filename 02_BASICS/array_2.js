@@ -14,13 +14,13 @@ const array2 = [23 , 'baljeet', 1818 , 4545 ,true]
 // method 2 - .concat
 
 // const array3 = myarray.concat(array2)
-// console.log(array3);
+// console.log(array3);     array3=myArrayElements+arr2Elements //works fine
 
 
 // method 3 - spread operator(...) 
 
 // const array3 = [...myarray , ...array2]
-// console.log(array3);
+// console.log(array3);     //works fine
 
 
 //other important prototypes 
@@ -29,7 +29,7 @@ const array2 = [23 , 'baljeet', 1818 , 4545 ,true]
 // console.log(Array.isArray('baljeet'))
 
 // console.log(Array.from('baljeet')) // string is iterable hence , non empty array
-// console.log(typeof Array.from(54363)) //empty array as number is not iterable 
+// console.log(Array.from(54363)) //empty array as number is not iterable 
 
 // score1 = 100
 // score2 = '200'

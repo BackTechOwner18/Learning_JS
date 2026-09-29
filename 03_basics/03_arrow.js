@@ -16,10 +16,10 @@ function anyfunc(num1 , num2)
     return this.username
 }
 
-// console.log(anyfunc()) //this. doesnot work with functions
+console.log(anyfunc()) //this. doesnot work with functions
 
-// console.log(this);       //returns empty object
-// console.log(this.username);     //undefined
+console.log(this);       //returns empty object
+console.log(this.username);     //undefined
 
 
 // function two (num1, num2){
@@ -46,11 +46,9 @@ function anyfunc(num1 , num2)
     // console.log(any(5,3));
     
 
-    // const chai= () => (console.log({username : "baljeet",price :999}))
+    // const chai= () => console.log({username : "baljeet",price :999})
     // chai();
     
 
     // const chai= () => (`baljeet`)
-    // console.log(chai())
-    
-    
+    // console.log(chai())      //baljeet

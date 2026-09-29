@@ -4,14 +4,16 @@ newObj.name = "Baljeet Singh"
 newObj.isLoggedIn = false
 
 // console.log(newObj)
+// console.log(newObj['name'])
+
 
 const obj1 = {
     1 : "a",
     2 : "b"
 }
-const obj2 = { 3 : "c" , 4 : "d"}
+// const obj2 = { 3 : "c" , 4 : "d"}
 // const obj3 = Object.assign(obj1 , obj2) //assign method for adding/concatinating two objects
-const obj3 = {...obj1 , ...obj2} // split method for adding/concatinating two objects
+// const obj3 = {...obj1 , ...obj2} // split method for adding/concatinating two objects
 // console.log(obj3);
 
 
@@ -27,6 +29,7 @@ const Regular = {
     }
 }
  
+// console.log(Regular);
 // console.log(Regular.username);
 // console.log(Regular.username.fullName);
 // console.log(Regular.username.fullName.firstName);
@@ -93,7 +96,7 @@ const course = {
 // console.log(course.price); normal method
 
 const {coursePrice: price} = course //destructuring 
-console.log(price);
+// console.log(price);
 
 // Basic API knowledge 
 
@@ -102,10 +105,9 @@ console.log(price);
 //     id : 355234263 ,
 //     isLoggedInorNot : true ,
 //     anything : 245524
-// 
+// }
 
 // [
-
 // {},
 // {},
 // {},

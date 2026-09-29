@@ -34,13 +34,21 @@ const array2 = new Array('hitesh', 23 , true , "Baljeet") //option 2
 
 const newArray = ['hitesh', 'baljeet', 'gvfhsh', true , 2332]
 
-// console.log(`A - ${newArray}`);
-// console.log(newArray.slice(2,3)) // first parameter is starting index while 2nd parameter is ending index + 1 
-// console.log(`B - ${newArray}`)
+console.log(`A - ${newArray}`);
+console.log(newArray.slice(2,3)) // first parameter is starting index while 2nd parameter is ending index + 1 
+console.log(`B - ${newArray}`)
 
 
-// console.log(newArray.splice(2,3)) // first parameter is starting index while 2nd parameter states how many values u want to remove from the array 
-// console.log(`c - ${newArray}`)
+console.log(newArray.splice(2,3)) // first parameter is starting index while 2nd parameter states how many values u want to remove from the array 
+console.log(`c - ${newArray}`)
+
+//------------- output --------------------\\
+
+//  A - ['hitesh', 'baljeet', 'gvfhsh', true , 2332]
+//  ['gvfhsh']
+//  B - ['hitesh', 'baljeet', 'gvfhsh', true , 2332]
+//  ['gvfhsh', true, 2332]
+//  C - ['hitesh', 'baljeet']
 
 
 // slice doesnot have any changes in the original array

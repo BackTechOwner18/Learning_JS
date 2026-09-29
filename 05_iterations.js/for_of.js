@@ -29,8 +29,8 @@ for (const element of map) {
     // console.log(element);      //returns arrays containing keys and values of map 
 }
 
-for (const [key,value] of map) {
-    // console.log(element);      //returns arrays containing keys and values of map 
+for (const [key,value] of map) {    //array destructuring
+    
     // console.log(`${key} has value - ${value}`)      //returns values of map 
     
 }

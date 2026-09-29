@@ -4,14 +4,26 @@
 //object declaration without singleton
 
 const NewSym = Symbol("baljeet singh")
+const SecSym = Symbol('bhatia')
 const myObj = {
     name : 'baljeet',
     age : 17 ,
     location : 'kanpur',
     IsLoggedIn : false,
     "full name" : "baljeet singh bhatia",
-    [NewSym] : "neWKEY1"
+    [NewSym] : SecSym ,
+// greeting2 : function ()
+//     {
+//         console.log(`hello ${this.name}`);
+        
+//     } ,
+//     greeting3 : function()
+//     {
+//         this.greeting2()
+//     }
 }
+
+// myObj.greeting3()
 
 // accessing objects components
 // console.log(myObj.name)
@@ -23,7 +35,7 @@ const myObj = {
 // console.log(myObj[NewSym])
 
 // console.log(typeof myObj[NewSym])
-// console.log(myObj);
+// console.log(myObj)
 
 // Object.freeze(myObj)
 // myObj.name = "nsnjbea"

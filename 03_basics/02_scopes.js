@@ -44,9 +44,9 @@ var c= 30
         username = " is a student"
         console.log(username);     //no error
     }
-    console.log(username);       //gives error
+    console.log(username);       //no error
     inside()
-    console.log(username);       //gives error  //VALUE OF USERNAME UPDATED
+    console.log(username);       //no error  //VALUE OF USERNAME UPDATED
     
 }
 
