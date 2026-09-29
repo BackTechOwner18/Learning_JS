@@ -58,6 +58,15 @@ const test = myNums.forEach( (num) => {
 })  
 
 
-console.log(test);      //returns undefined as foreach doesnot return any value
+// console.log(test);      //returns undefined as foreach doesnot return any value
 
+
+const newArray2 = []
+myNums.forEach( (num) => {
+    if (num>=5) {
+        newArray2.push(num)
+    }
+})
+
+// console.log(newArray2); 
 
