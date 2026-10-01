@@ -1,11 +1,12 @@
 # PROJECTS 
 
+# Project 1
+
 ## StackBlitz Project Link - 
 [Click Here](https://stackblitz.com/edit/stackblitz-starters-aujtbzb3?description=HTML/CSS/JS%20Starter&file=styles.css,index.html,chaiaurcode.js&terminalHeight=10&title=Static%20Starter)
 
-# Solution Codes (JS) :
+## Solution Code (JS) :
 
-## Project 1
 
 ```javascript
 
@@ -25,9 +26,10 @@ buttons.forEach(function (button) {
 
 
 ```
-## Project 2
-### StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
+# Project 2
+## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
 
+## Solution Code (JS) :
 ```javascript
 
   const form = document.querySelector('form')
