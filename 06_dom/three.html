@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>BaseOps</title>
+</head>
+<body  style="background-color: #565335; color : white">
+
+</body>
+<script>
+                //Adding a new element
+        const h1 = document.createElement('h1')
+        h1.style.backgroundColor = 'white'
+        h1.style.color = 'black'
+        h1.style.padding = "15px"
+        h1.style.borderRadius = '15px'
+        h1.innerText = 'BaseOps by Baljeet Singh'
+
+
+        //Adding another paragraph element 
+
+            const para = document.createElement('p')
+            para.innerText = 'Hi my name is Baljeet Singh and I am the owner of BaseOps'
+            // para.style.backgroundColor = 'black'
+            para.style.padding = '20px'
+            para.style.color = 'white'
+            para.style.borderRadius = '15px'
+            // para.innerHtml = '<h5> Baljeet Singh </h5>'
+
+        // NOW ADDING THE ELEMENTS TO DOCUMENT 
+
+            document.body.appendChild(h1)
+            document.body.appendChild(para)
+
+            const heading  = document.createElement('h1')
+            heading.innerText = 'baljeet singh!!'
+            heading.style.color = 'white'
+
+            para.appendChild(heading)
+</script>
+</html>
