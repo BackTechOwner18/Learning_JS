@@ -26,8 +26,7 @@ buttons.forEach(function (button) {
 
 ```
 ## Project 2
-### link - 
-[Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
+### StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
 
 ```javascript
 
