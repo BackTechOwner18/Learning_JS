@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>DOM | BaseOps</title>
+</head>
+<body style="background-color : #212121 ; color: #fff">
+        <ul class="LangName">
+            <li>Java</li>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>HTML</li>
+        </ul>
+</body>
+<script>
+        //edit elememts
+        function EditElement (LangName)
+        {
+            const SecondElement = document.querySelector('li:nth-child(2)')
+            const NewElement = document.createElement('li')
+            NewElement.appendChild(document.createTextNode(LangName))
+            SecondElement.replaceWith(NewElement)
+
+            //this is preferred as it is less transversing
+        }
+        EditElement('BaseOps')
+
+        //edit 
+        function EditElementTwo (val)
+        {
+            const newElement = document.createElement('li')
+            newElement.innerHTML = val
+            document.querySelector('li:first-child').replaceWith(newElement) 
+
+            //not preferred as it is more transversing for the system
+        }
+
+            EditElementTwo('BALJEET SINGH BHATIA')
+
+            //remove element
+            document.querySelector('li:last-child').remove()
+
+            //easy
+
+</script>
+</html>
