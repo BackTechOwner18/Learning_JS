@@ -74,3 +74,26 @@ form.addEventListener('submit', function(e)
 
 ```
 
+# Project 3
+## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-crr6qjxc?file=baseops.js)
+
+## Solution Code (JS) :
+```javascript
+
+const clock = document.querySelector('#clock')
+
+setInterval(function(){
+  
+  let time = new Date()
+  clock.innerHTML = time.toLocaleTimeString('en-IN')
+} , 1000)
+
+```
+
+# Project 4
+## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
+
+## Solution Code (JS) :
+```javascript
+
+```
