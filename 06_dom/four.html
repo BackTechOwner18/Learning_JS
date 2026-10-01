@@ -14,35 +14,50 @@
             <li>HTML</li>
         </ul>
 </body>
-<script>
-        //edit elememts
-        function EditElement (LangName)
-        {
-            const SecondElement = document.querySelector('li:nth-child(2)')
-            const NewElement = document.createElement('li')
-            NewElement.appendChild(document.createTextNode(LangName))
-            SecondElement.replaceWith(NewElement)
-
-            //this is preferred as it is less transversing
-        }
-        EditElement('BaseOps')
-
-        //edit 
-        function EditElementTwo (val)
-        {
-            const newElement = document.createElement('li')
-            newElement.innerHTML = val
-            document.querySelector('li:first-child').replaceWith(newElement) 
-
-            //not preferred as it is more transversing for the system
-        }
-
-            EditElementTwo('BALJEET SINGH BHATIA')
-
-            //remove element
-            document.querySelector('li:last-child').remove()
-
-            //easy
-
-</script>
+        <script>
+        
+            //adding (previous topic)
+                function addElement (langName)
+                {
+                        const newElement = document.createElement('li')
+                        newElement.appendChild(document.createTextNode(langName))
+                        newElement.style.color= 'white'
+                        document.querySelector('ul').appendChild(newElement)
+                        
+                }
+                addElement('BaseOps is the best')
+                
+                
+        
+        
+                //edit elememts
+                function EditElement (LangName)
+                {
+                    const SecondElement = document.querySelector('li:nth-child(2)')
+                    const NewElement = document.createElement('li')
+                    NewElement.appendChild(document.createTextNode(LangName))
+                    SecondElement.replaceWith(NewElement)
+        
+                    //this is preferred as it is less transversing
+                }
+                EditElement('BaseOps')
+        
+                //edit 
+                function EditElementTwo (val)
+                {
+                    const newElement = document.createElement('li')
+                    newElement.innerHTML = val
+                    document.querySelector('li:first-child').replaceWith(newElement) 
+        
+                    //not preferred as it is more transversing for the system
+                }
+        
+                    EditElementTwo('BALJEET SINGH BHATIA')
+        
+                    //remove element
+                    // document.querySelector('li:last-child').remove()
+        
+                    //easy
+        
+        </script>
 </html>
