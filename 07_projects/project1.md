@@ -1,6 +1,6 @@
 # PROJECTS 
 
-# Project 1
+# Project 1 (Background Color Changer)
 
 ## StackBlitz Project Link - 
 [Click Here](https://stackblitz.com/edit/stackblitz-starters-aujtbzb3?description=HTML/CSS/JS%20Starter&file=styles.css,index.html,chaiaurcode.js&terminalHeight=10&title=Static%20Starter)
@@ -26,7 +26,7 @@ buttons.forEach(function (button) {
 
 
 ```
-# Project 2
+# Project 2 (BMI Calculator)
 ## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
 
 ## Solution Code (JS) :
@@ -74,7 +74,7 @@ form.addEventListener('submit', function(e)
 
 ```
 
-# Project 3
+# Project 3 (Live Digital Clock)
 ## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-crr6qjxc?file=baseops.js)
 
 ## Solution Code (JS) :
@@ -90,10 +90,119 @@ setInterval(function(){
 
 ```
 
-# Project 4
-## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-trqncjri?file=baseops.js)
+# Project 4 (Guess The Number)
+## StackBlitz Project Link - [Click here](https://stackblitz.com/edit/stackblitz-starters-ogujgxhw?description=HTML/CSS/JS%20Starter&file=styles.css,index.html,script.js&terminalHeight=10&title=Static%20Starter)
 
 ## Solution Code (JS) :
 ```javascript
+
+let NumToBeGuessed = parseInt(Math.random()*100 + 1)
+const form = document.querySelector('form')
+const userInput = document.querySelector('.guessField')
+const submit = document.querySelector('#subt')
+const lowOrHigh = document.querySelector('.lowOrHi')
+const previousGuesses= document.querySelector('.guesses') 
+const remaining = document.querySelector('.lastResult')
+const start = document.querySelector('.resultParas')
+
+let prevGuesses = []
+let remainingGuesses = 10 
+let playGame = true
+
+const p = document.createElement('h2')
+
+
+if (playGame)
+{
+  submit.addEventListener('click', function(e)
+  {
+    e.preventDefault()
+    let guess = parseInt(userInput.value)
+    validateGuess(guess)
+  })
+  
+
+}
+function validateGuess(guess)
+{
+  if (guess < 1)
+  {
+    alert( `Please enter a number greater than 1`)
+  }
+  else if (guess > 100)
+  {
+    alert(`Please enter a number less than 100`)
+  }
+  else if (isNaN(guess))
+  {
+    alert(`Please enter a valid number`)
+  }
+  else {
+    userInput.value =''
+      prevGuesses.push(guess)
+      remaining.innerHTML = --remainingGuesses
+      lowOrHi(guess)
+      previousGuesses.innerHTML = prevGuesses
+  }
+}
+
+function lowOrHi(guess)
+{
+  if (guess<NumToBeGuessed)
+  {
+    DisplayMessage(`The value is TOO Low`)
+  }
+  else if (guess>NumToBeGuessed)
+  {
+    DisplayMessage(`The value is TOO High`)
+  }
+  if (guess===NumToBeGuessed)
+  {
+    DisplayMessage(`Congrats , you won!`)
+    endGame()
+  }
+  if (remainingGuesses === 0)
+  {
+
+    endGame()
+  }
+}
+
+function DisplayMessage(message)
+{
+  lowOrHigh.innerHTML = `<h3> ${message} </h3>`
+}
+
+function endGame(guess)
+  {
+    guess =''
+    userInput.setAttribute('disabled', '')
+    submit.setAttribute('disabled', '')
+    playGame = false
+    p.setAttribute('class', 'startNewGame')
+    p.innerHTML = `<span>Start new game</span>`
+    p.classList.add('button')
+    start.appendChild(p)
+    p.addEventListener('click', function(e)
+    {
+      newGame()
+    })
+
+  }
+
+  function newGame()
+  {
+    NumToBeGuessed = parseInt(Math.random()*100 + 1)
+    prevGuesses = []
+    remainingGuesses = 10 
+    userInput.removeAttribute('disabled')
+    submit.removeAttribute('disabled')
+    remaining.innerHTML = remainingGuesses
+    lowOrHigh.innerHTML = ''
+    previousGuesses.innerHTML= ''
+    start.removeChild(p)
+    playGame = true
+    
+  }
 
 ```
