@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        </ul>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+   </div>
+</body>
+<script>
+
+    // EVENTS - 
+
+    // .onclick  (not ideal)
+
+    // old methods - 
+
+    //jQuery
+    //on
+
+
+// to add an event - .addEventListener('eventName', function(e){} , false/true)
+// false - event bubbling (down to up)
+// true - event capturing 
+
+//default - false
+
+// const ul = document.querySelector('#images')
+// ul.addEventListener('click', function(e)
+// {
+//     console.log(('ul clicked'))
+// } , false)
+
+// const owl = document.querySelector('#owl')
+
+// owl.addEventListener('click', function(e)
+// {
+//     console.log(('owl clicked'))
+// }, false)
+
+//prints owl clicked first then ul clicked when clicked on owl
+
+const ul = document.querySelector('#images')
+ul.addEventListener('click', function(e)
+{
+    console.log(('ul clicked'))
+} )
+
+const owl = document.querySelector('#owl')
+
+owl.addEventListener('click', function(e)
+{
+    console.log(('owl clicked'))
+    e.stopPropagation()
+} )
+
+//prints only owl clicked when clicked on owl
+
+
+
+// Task - Make the clicked immage disappear - 
+
+// const images = document.getElementById('images')
+
+// images.addEventListener('click', function (e)
+// {
+//     if(e.target.tagName === 'IMG')
+// {
+//     // console.log(e);
+//     // console.log(e.target);
+//     e.target.remove()
+// }})
+
+
+// Task - bring the clicked image on top
+
+// const images = document.querySelector('#images')
+// images.addEventListener('click', function(e){
+// if(e.target.tagName === 'IMG')
+// {
+//     const firstChild = images.firstElementChild
+//     images.insertBefore(e.target.parentNode , firstChild)
+//     images.
+// }
+
+// })
+
+
+// Task - bring the clicked image at the bottom
+
+// const images = document.querySelector('#images')
+// images.addEventListener('click', function(e){
+// if(e.target.tagName === 'IMG')
+// {
+    
+//     images.insertAdjacentElement('afterend', e.target.parentNode)
+// }
+
+// })
+
+// Task - put the clicked image one position down 
+
+// const images = document.querySelector('#images')
+
+// images.addEventListener('click', function(e)
+// {
+//     if (e.target.tagName === 'IMG')
+// {
+//     let clickedLi = e.target.parentNode
+//     let toSwapWith = clickedLi.nextElementSibling
+//     // console.log(clickedLi);
+//     // console.log(toSwapWith)
+
+//     images.insertBefore(toSwapWith, clickedLi)
+    
+// }})
+
+</script>
+</html>
