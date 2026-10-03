@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BaseOps </h1>
+    <span><button class="start">Start</button></span>
+    <span><button class="stop">Stop</button></span>
+</body>
+<script>
+
+    //setInterval
+
+        const startButton= document.querySelector('.start')
+        const stopButton = document.querySelector('.stop')
+
+        let startFunction = ''
+        startButton.addEventListener('click', function ()
+    {
+        startFunction = setInterval(function(){
+
+            console.log('baseops');
+            
+
+        }, 1000)
+    })
+
+    stopButton.addEventListener('click', function(){
+
+        const stopFunction = clearInterval(startFunction)
+        console.log(`Stopped!`);
+        
+
+    })
+
+ 
+
+</script>
+</html>
