@@ -206,3 +206,77 @@ function endGame(guess)
   }
 
 ```
+
+# Project 5 (Interval BG Changer)
+
+## StackBlitz Project Link - 
+[Click Here](https://stackblitz.com/edit/stackblitz-starters-jroqr15h?file=baseops.js)
+
+## Solution Code (JS) :
+
+```javascript 
+
+const body = document.querySelector('body')
+const startButton = document.querySelector('#start')
+const stopButton = document.querySelector('#stop')
+  let colorChanger
+function colorChange ()
+{ 
+  let hex = "0123456789ABCDEF"
+  let color = "#"
+  for (let i = 0;i< 6 ; i++)
+  {
+  
+    color += hex[Math.floor(Math.random()*16)]
+  }
+  return color
+}
+
+
+//MY LOGIC (NOT WRONG)
+
+  // startButton.addEventListener('click', function(){
+  // if (!colorChanger){
+  // colorChanger = setInterval(function() {
+  //   let randomColorCode = Math.round(Math.random()*900000 + 1)
+
+  //     body.style.backgroundColor = `#${randomColorCode}`
+
+  // }, 1000)}
+
+startButton.addEventListener('click', function(){
+  
+  if (!colorChanger)
+  colorChanger = setInterval(function() {
+
+    let newColor = colorChange()
+    body.style.backgroundColor = newColor
+    
+  }, 1000)
+
+})
+
+  stopButton.addEventListener('click', function (){
+
+    clearInterval(colorChanger)
+    colorChanger = null
+
+  })
+
+    //DONE
+
+```
+
+
+# Project 6 (Key Magic)
+
+## StackBlitz Project Link - 
+[Click Here](https://stackblitz.com/edit/stackblitz-starters-4vip5bkn?description=HTML/CSS/JS%20Starter&file=script.js,styles.css,index.html&terminalHeight=10&title=Static%20Starter)
+
+## Solution Code (JS) :
+
+```javascript 
+
+  
+
+```
