@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BaseOps </h1>
+    <span><button class="stop">Stop</button></span>
+</body>
+<script>
+
+    //setTimeout
+
+   const changeMe =  setTimeout(function (str)
+    {
+
+       document.querySelector('h1').innerHTML= str
+        
+    }, 2000 , "baljeet singh");
+
+    const button = document.querySelector('.stop')
+
+    button.addEventListener('click',function ()
+
+{
+    clearTimeout(changeMe)
+    console.log(`STOPPED!`);
+    
+})
+
+
+</script>
+</html>
