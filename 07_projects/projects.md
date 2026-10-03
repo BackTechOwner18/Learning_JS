@@ -268,15 +268,42 @@ startButton.addEventListener('click', function(){
 ```
 
 
-# Project 6 (Key Magic)
+# Project 6 (Key Magic) (even better)
 
 ## StackBlitz Project Link - 
-[Click Here](https://stackblitz.com/edit/stackblitz-starters-4vip5bkn?description=HTML/CSS/JS%20Starter&file=script.js,styles.css,index.html&terminalHeight=10&title=Static%20Starter)
+[Click Here](https://stackblitz.com/edit/stackblitz-starters-4vip5bkn?file=index.html,baseops.js)
 
 ## Solution Code (JS) :
 
 ```javascript 
 
+  const body = document.querySelector('body')
+const startButton = document.querySelector('#start')
+
+startButton.addEventListener('click', function(){
+
+  document.querySelector('#insert').innerHTML = `<div class="key">Press the key and watch magic</div>`
+  body.addEventListener('keydown', (e) => {
   
+    document.querySelector('#insert').innerHTML = `
+        <span id='table'> <table style="width:100%">
+        <tr>
+          <th> Key </th>
+          <th> Key Code </th>
+          <th> Code </th>
+        </tr>
+        <tr>
+          <td> ${e.key === " " ? "Space" : e.key} </td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>  </span>
+    `
+  
+  })
+
+})
+
+//EASY
 
 ```
