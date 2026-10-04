@@ -307,3 +307,125 @@ startButton.addEventListener('click', function(){
 //EASY
 
 ```
+
+# PROJECT 7 (MINI QUIZ)
+
+## StackBlitz Project Link - 
+(Click Here)[https://stackblitz.com/edit/stackblitz-starters-3yskcmuj?description=HTML/CSS/JS%20Starter&file=index.html,script.js&terminalHeight=10&title=Static%20Starter]
+
+## SOLUTION CODE :
+
+```javascript 
+
+const questionsAndAnswers = [
+  { question: 'What is my first name?', answer: 'Baljeet' },
+  { question: 'What is my last name?', answer: 'Singh' },
+  { question: 'What is the name of my country?', answer: 'India' }
+];
+
+let totalQuestionNumber = questionsAndAnswers.length;
+let quesNumber = 1;
+let score = 0; 
+
+const startButton = document.querySelector('.start');
+
+startButton.addEventListener('click', function() {
+  const body = document.querySelector('body');
+  body.innerHTML = `
+    <div class="quiz-card">
+      <h1>Mini Study Quiz</h1>
+      
+      <!-- Quiz Question & Input Section -->
+      <div id="quiz-container">
+          <p id="question-text">Loading question...</p>
+          <input type="text" id="user-answer" placeholder="Type your answer here..." autocomplete="off">
+          <button id="submit-btn">Submit Answer</button>
+      </div>
+    
+      <!-- Final Score Display (Hidden until quiz ends) -->
+      <div id="score-container" class="hidden">
+          <h2>Quiz Complete! 🎉</h2>
+          <p>Your Final Score:</p>
+          <div id="final-score-display">0 / 0</div>
+          <button id="restart-btn">Try Again</button>
+      </div>
+    </div>
+  `;
+
+  displayQuestion(quesNumber);
+
+  const submit = document.querySelector('#submit-btn');
+  submit.addEventListener('click', validateInput);
+});
+
+function displayQuestion(num) {
+  let ques = document.querySelector('#question-text');
+  
+  if (num <= totalQuestionNumber) {
+    let currentObject = questionsAndAnswers[num - 1];
+    ques.innerHTML = `Question - ${currentObject.question}`;
+  } else {
+    showEndScreen();
+  }
+}
+
+function validateInput() {
+  let currentObject = questionsAndAnswers[quesNumber - 1];
+  const container = document.querySelector('#quiz-container');
+  const inputElement = document.querySelector('#user-answer');
+  const userInput = inputElement.value;
+
+  const existingMsg = document.querySelector('#displayMsg');
+  if (existingMsg) { 
+    existingMsg.remove();
+  }
+
+  if (userInput.trim() === '') {
+    const displayMsg = document.createElement('p'); 
+    displayMsg.id = 'displayMsg'; 
+    displayMsg.style.color = 'red'; 
+    displayMsg.innerHTML = `Please Enter a Valid Input`;
+    container.appendChild(displayMsg);
+  } 
+  else {
+    if (userInput.trim().toLowerCase() === currentObject.answer.toLowerCase()) {
+      score++;
+    }
+    
+    inputElement.value = '';
+    
+    quesNumber++;
+    displayQuestion(quesNumber);
+  }
+}
+
+function showEndScreen() {
+  const quizContainer = document.querySelector('#quiz-container');
+  const scoreContainer = document.querySelector('#score-container');
+  const finalScoreDisplay = document.querySelector('#final-score-display');
+
+  quizContainer.style.display = 'none';
+  scoreContainer.classList.remove('hidden'); 
+  scoreContainer.style.display = 'block';     
+  finalScoreDisplay.innerHTML = `${score} / ${totalQuestionNumber}`;
+
+  // ✅ Fix 1: Attach the event listener here, now that the button exists on screen
+  let restartButton = document.querySelector('#restart-btn');
+  restartButton.addEventListener('click', newGame);
+}
+
+function newGame() {
+  score = 0;
+  quesNumber = 1;
+  
+  const quizContainer = document.querySelector('#quiz-container');
+  const scoreContainer = document.querySelector('#score-container');
+  
+  // ✅ Fix 2: Show the quiz container instead of hiding it!
+  scoreContainer.style.display = 'none';
+  quizContainer.style.display = 'block';
+  
+  displayQuestion(quesNumber);
+}
+
+```
