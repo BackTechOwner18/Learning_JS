@@ -11,7 +11,7 @@
 
     let followerCount
     let imageURL
-
+    let githubURL = 'https://github.com/hiteshchoudhary'
     async function getData()
     {
         try {
@@ -121,8 +121,14 @@
 // const imageURL = data['avatar_url'] //check once
 // const imageTag = document.querySelector('img')
 // imageTag.src = imageURL
+const clickHere = document.querySelector('.btn-primary')
+   clickHere.innerHTML = `Github Profile`
+
+   clickHere.addEventListener('click', function()
+   {
+     window.open(githubURL)
+   })
 
 })
-
 </script>
 </html>
